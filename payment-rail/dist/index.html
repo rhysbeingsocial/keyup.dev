@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Sass Starter</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+  <!--build:css css/style.css-->
+  <link rel="stylesheet" href="css/style.css" />
+  <!--endbuild-->
+</head>
+
+<body>
+  <div class="container">
+    <div class="simple">
+      <div class="simple__title">Send</div>
+      <div class="simple__amount">
+        <span id="currency">$</span>
+        <span class="number" role="number" contenteditable>99</span>
+      </div>
+    </div>
+    <div class="advanced" id="advanced">
+      <div class="advanced__dropdown">USDC</div>
+      <div class="advanced__text">as</div>
+      <div class="advanced__dropdown">SOL</div>
+      <div class="advanced__text">on</div>
+      <div class="advanced__dropdown">Optimisim</div>
+    </div>
+
+
+  </div>
+  <div class="switch">
+    <input type="checkbox" id="trigger" /><label for="trigger"></label>
+  </div>
+
+  <div class="copyright">
+    <a href="" class="copyright__user"><img src="https://pbs.twimg.com/profile_images/1726911606221590528/V3KXQc6-_400x400.jpg"> <p>Dev by<br/> <span>@rhysbeingsocial</span></p></a>
+    <a href="" class="copyright__user"><img src="https://pbs.twimg.com/profile_images/1713576030063972352/qEdjq6VQ_400x400.jpg"> <p>Design by<br/> <span>@0xDesigner</span></p></a>
+  </div>
+  <script>
+    const trigger = document.getElementById('trigger');
+    const advanced = document.getElementById('advanced');
+    const currency = document.getElementById('currency');
+
+    trigger.addEventListener('change', (e) => {
+      advanced.classList.toggle('visible');
+      currency.classList.toggle('hidden');
+    });
+  </script>
+</body>
+
+</html>
