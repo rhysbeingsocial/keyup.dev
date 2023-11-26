@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- HTML Meta Tags -->
+  <title>Payment Rail — Keyup.dev</title>
+  <meta name="description" content="Tiny bytes of code for the world to build on top of.">
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="Payment Rail — Keyup.dev">
+  <meta itemprop="description" content="Tiny bytes of code for the world to build on top of.">
+  <meta itemprop="image" content="http://keyup.dev/payment-rail/images/social-share.png">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://keyup.dev">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Payment Rail — Keyup.dev">
+  <meta property="og:description" content="Tiny bytes of code for the world to build on top of.">
+  <meta property="og:image" content="http://keyup.dev/payment-rail/images/social-share.png">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Payment Rail — Keyup.dev">
+  <meta name="twitter:description" content="Tiny bytes of code for the world to build on top of.">
+  <meta name="twitter:image" content="http://keyup.dev/payment-rail/images/social-share.png">
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-811YDNPV2M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-811YDNPV2M');
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="simple">
+      <div class="simple__title">Send</div>
+      <div class="simple__amount">
+        <span id="currency">$</span>
+        <span class="number" role="number" contenteditable>99</span>
+      </div>
+    </div>
+    <div class="advanced" id="advanced">
+      <div class="advanced__dropdown">USDC</div>
+      <div class="advanced__text">as</div>
+      <div class="advanced__dropdown">SOL</div>
+      <div class="advanced__text">on</div>
+      <div class="advanced__dropdown">Optimism</div>
+    </div>
+
+
+  </div>
+  <div class="switch">
+    <input type="checkbox" id="trigger" /><label for="trigger"></label>
+  </div>
+
+  <div class="copyright">
+    <a href="https://github.com/rhysbeingsocial/keyup.dev/tree/feature/master/payment-rail" rel="noopener noreferrer" class="copyright__github">
+      <img src="images/github.svg">
+
+    </a>
+    <a href="https://twitter.com/rhysbeingsocial" rel="noopener noreferrer" class="copyright__user"><img
+        src="https://pbs.twimg.com/profile_images/1726911606221590528/V3KXQc6-_400x400.jpg">
+      <p>Dev by<br /> <span>@rhysbeingsocial</span></p>
+    </a>
+    <a href="https://twitter.com/0xDesigner" rel="noopener noreferrer" class="copyright__user"><img
+        src="https://pbs.twimg.com/profile_images/1713576030063972352/qEdjq6VQ_400x400.jpg">
+      <p>Design by<br /> <span>@0xDesigner</span></p>
+    </a>
+  </div>
+  <script>
+    const trigger = document.getElementById('trigger');
+    const advanced = document.getElementById('advanced');
+    const currency = document.getElementById('currency');
+
+    trigger.addEventListener('change', (e) => {
+      advanced.classList.toggle('visible');
+      currency.classList.toggle('hidden');
+    });
+  </script>
+</body>
+
+</html>
