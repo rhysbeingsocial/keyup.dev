@@ -179,7 +179,14 @@ input:checked + label:after {
   border: 1px solid #E6E6E6;
   box-shadow: 0 1px 3px rgba(13, 28, 82, 0.0392156863), 0 1px 6px rgba(13, 28, 82, 0.0117647059);
   border-radius: 6px;
-  padding: 2px 8px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.copyright__github img {
+  width: 18px;
 }
 .copyright__user {
   font-size: 12px;
